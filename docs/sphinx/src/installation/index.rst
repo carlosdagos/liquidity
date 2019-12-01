@@ -9,23 +9,24 @@ To install Liquidity from sources, you will need a working
 installation of OCaml with `OPAM
 <http://opam.ocaml.org/doc/2.0/Install.html>`__ at least version 2.0.
 
-As of Oct 4, 2019, the following process should work:
+As of Dec 1, 2019, the following process should work:
 
 1. Create an OPAM switch called ``liquidity``, with version 4.06.1 of OCaml::
-     
-    opam switch create liquidity 4.06.1
+
+    opam switch create liquidity --empty
+    opam install --switch=liquidity ocaml.4.06.1
 
   This command should take some time to compile the OCaml distribution.
   Everytime you want to use this switch in a terminal, you should use
   the following command::
 
     eval `opam env --switch liquidity`
-    
+
 2. Checkout the Github repository::
-     
+
     git clone https://github.com/OCamlPro/liquidity
     cd liquidity
-    
+
   This command should create a ``liquidity`` directory with the ``next`` branch.
 
 3. Within the ``liquidity`` directory, the Dune Network sources in branch
